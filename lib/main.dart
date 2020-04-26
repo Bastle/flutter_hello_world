@@ -2,31 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'package:dio/dio.dart';
 import 'person.dart';
+import 'MyApp.dart';
+import 'dart:convert';
 
 
 void main() {
-  // var a;
-  // print(a);
-  // a = 1222;
-  // print(a);
-  // a = 'hello world';
-  // print(a);
-  // a = [1,2,3, '123123'];
-  // print(a);
-  // double c = 32.5;
-  // int d = 20;
-  // print(c + d);
-  // print(c - d);
-  // print(c / d);
-  // print(c ~/ d);
-  // print(c % d);
-  // print(d.isEven);
-  // print(d.isOdd);
-  // print(c.floor());
-  // print(c.ceil());
-  // print(c.round());
-  // print(c.toInt());
-  // print(d.toDouble());
+   var a;
+   a?.print('1')??print('2');
+   a = 1222;
+   print(a);
+   a = 'hello world';
+   print(a);
+   a = [1,2,3, '123123'];
+   print(a);
+//   double c = 32.5;
+//   int d = 20;
+//   print(c + d);
+//   print(c - d);
+//   print(c / d);
+//   print(c ~/ d);
+//   print(c % d);
+//   print(d.isEven);
+//   print(d.isOdd);
+//   print(c.floor());
+//   print(c.ceil());
+//   print(c.round());
+//   print(c.toInt());
+//   print(d.toDouble());
 
 //   String str1 = 'hello';
 //   String str2 = "hello";
@@ -89,7 +91,7 @@ void main() {
 //   default:
 //     break;
 // }
-  // getInfo();
+   getInfo();
   // Function func = printHello;
   // func();
   // var list = [1,2,3,4];
@@ -152,8 +154,9 @@ String getPerson(String name, int age) => 'name=$name, age=$age';
 
 void getInfo () async {
   Dio dio =  Dio();
-  Response response;
-  response= await dio.get(
+
+  var response;
+  response = await dio.get(
     "http://games.mobileapi.hupu.com/6/7.3.4/basketballapi/teamStandingList?client=&webp=0",
     queryParameters: {
       "offline": "json",
@@ -161,12 +164,14 @@ void getInfo () async {
       "competitionType": "nba"
     }
   );
-  // print(response);
+//  print(response);
+  print(response);
+//  print(json.decode(response));
   // print(response.data.toString());
 }
 
 
-class MyApp extends StatelessWidget {
+class MyApp2 extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -213,7 +218,7 @@ class RandomWordsWidget extends StatelessWidget {
     final wordPair = new WordPair.random();
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: new Text(wordPair.toString())
+      child: new Text(wordPair.asPascalCase)
     );
   }
 }
@@ -304,7 +309,7 @@ class NewRoute extends StatelessWidget {
         title: Text("new route form chengyubing")
       ),
       body: Center(
-        child: Text("holy shit"),
+        child: Text("holy shit1111"),
       ),
     );
   }
