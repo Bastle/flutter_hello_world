@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'CustomCard.dart';
+
 
 class MyApp extends StatelessWidget {
   @override
@@ -30,7 +32,17 @@ class HomePage extends StatelessWidget {
             ]
         ),
         body: Center(
-            child: Text('my exciting experience is in Japan')
+            child: Column(
+              children: <Widget>[
+                Text('my exciting experience is in Japan'),
+                CustomCard(
+                  index: 1,
+                  onPress: (){
+                    print('card');
+                  },
+                )
+              ],
+            )
         )
     );
   }

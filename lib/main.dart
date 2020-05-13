@@ -1,12 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:english_words/english_words.dart';
 import 'package:dio/dio.dart';
 import 'person.dart';
 import 'MyApp.dart';
-import 'dart:convert';
+import 'CustomCard.dart';
+//import 'data:async' show Future;
+import 'package:flutter/services.dart' show rootBundle;
 
 
 void main() {
+  Future<String> loadAsset() async {
+    var data = await rootBundle.loadString('my-assets/data.json');
+    return data;
+  }
+  print(loadAsset());
+  runApp(MyApp());
+
    var a;
    a?.print('1')??print('2');
    a = 1222;
@@ -111,7 +122,7 @@ void main() {
   // closure();
   classAndObject();
   
-  runApp(MyApp());
+
 }
 closure(){
   a(){
