@@ -57,4 +57,27 @@ Flutter 入门基础知识
 
 表单输入与富文本
 
+youtube flutter 入门到进阶
+
+1. 2020.5.13  3-5 项目结构、资源、依赖和本地化   over
+    json定义
+
+
+    图片定义
+    images/my_icons.png
+    images/2.0x/my_icons.png
+    images/3.0x/my_icons.png
+    assets:
+        - images/my_icon.png
+
+    图片使用
+    @override
+    Widget build(BuildContext context) {
+        return Image.asset("images/my_icon.png");
+    }
+
+
+
+
+
 
