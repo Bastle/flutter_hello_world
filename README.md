@@ -59,7 +59,7 @@ Flutter 入门基础知识
 
 youtube flutter 入门到进阶
 
-1. 2020.5.13  3-5 项目结构、资源、依赖和本地化   over
+3-5 项目结构、资源、依赖和本地化  2020.5.13  over
     json定义
 
 
@@ -75,6 +75,26 @@ youtube flutter 入门到进阶
     Widget build(BuildContext context) {
         return Image.asset("images/my_icon.png");
     }
+
+3-6  认识视图  2020.5.14  over
+    Flutter View
+    更新Widgets
+    布局
+    布局中添加/删除组件
+    对Widget做动画
+    绘图
+    构建自定义Widget
+    设置Widget透明度
+
+
+3-7  布局与列表  2020.5.14  over
+    分层布局  Stack
+    更新列表  ListView.builder
+
+
+3-8  状态管理 2020.5.14
+    StatelessWidget  无状态组件
+    StatefulWidget   有状态组件
 
 
 

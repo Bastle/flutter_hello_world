@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './src/MyListView.dart';
 import 'CustomCard.dart';
 
 
@@ -40,6 +41,49 @@ class HomePage extends StatelessWidget {
                   onPress: (){
                     print('card');
                   },
+                ),
+                Center(
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        color: Colors.red,
+                        width: 50.0,
+                        height: 100.0,
+                      ),
+                      Container(
+                        color: Colors.blue,
+                        width: 50.0,
+                        height: 50.0,
+                      ),
+                      Container(
+                        color: Colors.blue,
+                        width: 100.0,
+                        height: 100.0,
+                      ),
+                      Container(
+                        width: 500.0,
+                        height: 200.0,
+                        child: MyListView(),
+                      )
+                    ],
+                  ),
+                ),
+                Stack(
+                  alignment: const Alignment(0.6, 0.6),
+                  children: <Widget>[
+                    CircleAvatar(
+                      backgroundImage: NetworkImage(
+                        "https://avatars3.githubusercontent.com/u/14101776?v=4"
+                      )
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.black45,
+                      ),
+                      child: Text('Flutter')
+                    ),
+
+                  ],
                 )
               ],
             )
