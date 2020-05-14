@@ -18,19 +18,19 @@ class MyListView extends StatelessWidget {
 }
 
 
-class SampleAppPage extends StatefulWidget {
-  SampleAppPage({Key key}): super(key: key);
-
-  @override
-  _SampleAppPageState createState() => _SampleAppPageState();
-}
-
-class _SampleAppPageState extends State<SampleAppPage>{
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return ListView.builder(
-        itemBuilder:()
-    );
-  }
-}
+//class SampleAppPage extends StatefulWidget {
+//  SampleAppPage({Key key}): super(key: key);
+//
+//  @override
+//  _SampleAppPageState createState() => _SampleAppPageState();
+//}
+//
+//class _SampleAppPageState extends State<SampleAppPage>{
+//  @override
+//  Widget build(BuildContext context) {
+//    // TODO: implement build
+//    return ListView.builder(
+//        itemBuilder:()
+//    );
+//  }
+//}
