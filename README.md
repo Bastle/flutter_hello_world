@@ -92,7 +92,7 @@ youtube flutter 入门到进阶
     更新列表  ListView.builder
 
 
-3-8  状态管理 2020.5.14
+3-8  状态管理 2020.5.14    4:16
     StatelessWidget  无状态组件
     StatefulWidget   有状态组件
 
