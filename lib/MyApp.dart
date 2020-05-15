@@ -60,10 +60,15 @@ class HomePage extends StatelessWidget {
                         width: 100.0,
                         height: 100.0,
                       ),
+//                      Container(
+//                        width: 500.0,
+//                        height: 200.0,
+//                        child: MyListView(),
+//                      ),
                       Container(
                         width: 500.0,
-                        height: 200.0,
-                        child: MyListView(),
+                        height: 400.0,
+                        child: SampleAppPage(),
                       )
                     ],
                   ),

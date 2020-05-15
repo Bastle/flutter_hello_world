@@ -92,10 +92,20 @@ youtube flutter 入门到进阶
     更新列表  ListView.builder
 
 
-3-8  状态管理 2020.5.14    4:16
+3-8  状态管理 2020.5.14    over
     StatelessWidget  无状态组件
     StatefulWidget   有状态组件
 
+    每个widget管理自己的状态
+    父widget管理子widget状态
+    混合搭配管理的方法
+
+3-9  路由与导航  2020.5.15   over
+    Route    应用程序抽象的屏幕或页面
+    Navigator  管理路由的组件
+    MaterialPageRoute 模版路由
+
+3-10 线程和异步UI 2020.5.15   1:15
 
 
 
