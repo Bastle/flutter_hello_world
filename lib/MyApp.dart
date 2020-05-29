@@ -33,63 +33,17 @@ class HomePage extends StatelessWidget {
             ]
         ),
         body: Center(
-            child: Column(
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
               children: <Widget>[
-                Text('my exciting experience is in Japan'),
-                CustomCard(
-                  index: 1,
-                  onPress: (){
-                    print('card');
-                  },
+                Container(
+                  width: 200.0,
+                  child: SampleAppPage(),
                 ),
-                Center(
-                  child: Column(
-                    children: <Widget>[
-                      Container(
-                        color: Colors.red,
-                        width: 50.0,
-                        height: 100.0,
-                      ),
-                      Container(
-                        color: Colors.blue,
-                        width: 50.0,
-                        height: 50.0,
-                      ),
-                      Container(
-                        color: Colors.blue,
-                        width: 100.0,
-                        height: 100.0,
-                      ),
-//                      Container(
-//                        width: 500.0,
-//                        height: 200.0,
-//                        child: MyListView(),
-//                      ),
-                      Container(
-                        width: 500.0,
-                        height: 400.0,
-                        child: SampleAppPage(),
-                      )
-                    ],
-                  ),
+                Container(
+                  width: 200.0,
+                  child: SampleAppPage(),
                 ),
-                Stack(
-                  alignment: const Alignment(0.6, 0.6),
-                  children: <Widget>[
-                    CircleAvatar(
-                      backgroundImage: NetworkImage(
-                        "https://avatars3.githubusercontent.com/u/14101776?v=4"
-                      )
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.black45,
-                      ),
-                      child: Text('Flutter')
-                    ),
-
-                  ],
-                )
               ],
             )
         )

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:dio/dio.dart';
+import 'dart:convert' show json;
 
 class MyListView extends StatelessWidget {
   @override
@@ -31,9 +33,7 @@ class _SampleAppPageState extends State<SampleAppPage>{
   @override
   void initState(){
     super.initState();
-    for(int i = 0; i < 100; i++){
-      widgets.add(getRow(i));
-    }
+    getInfo();
   }
 
   @override
@@ -42,7 +42,8 @@ class _SampleAppPageState extends State<SampleAppPage>{
     return ListView.builder(
       itemCount: widgets.length,
       itemBuilder: (BuildContext context, int position){
-        return getRow(position);
+//        return getRow(position);
+        return getItem(widgets[position], position);
       },
     );
   }
@@ -57,6 +58,39 @@ class _SampleAppPageState extends State<SampleAppPage>{
         setState(() {
           widgets.add(getRow(widgets.length + 1));
           print('row $i');
+        });
+      },
+    );
+  }
+
+  void getInfo () async {
+    Dio dio =  Dio();
+
+//  var response;
+    Response response = await dio.get(
+        "http://games.mobileapi.hupu.com/6/7.3.4/basketballapi/teamStandingList?client=&webp=0",
+        queryParameters: {
+          "offline": "json",
+          "competitionLeagueType": "nba",
+          "competitionType": "nba"
+        }
+    );
+    List list = json.decode(response.toString())["result"]["rankTypeListMap"]["E"];
+    print(list);
+    for(var item in list){
+      print(item["teamName"]);
+      widgets.add(item["teamName"]);
+    }
+  }
+  Widget getItem(teamName, int position){
+    return GestureDetector(
+      child: Padding(
+        padding: EdgeInsets.all(30.0),
+        child: Text('$teamName $position'),
+      ),
+      onTap: (){
+        setState(() {
+          print('row $teamName $position');
         });
       },
     );
