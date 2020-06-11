@@ -51,7 +51,7 @@ class _SampleAppPageState extends State<SampleAppPage>{
   Widget getRow(int i){
     return GestureDetector(
       child: Padding(
-        padding: EdgeInsets.all(10.0),
+        padding: EdgeInsets.all(5.0),
         child: Text("Row $i"),
       ),
       onTap: (){

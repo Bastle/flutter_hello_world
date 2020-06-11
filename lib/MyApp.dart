@@ -37,13 +37,9 @@ class HomePage extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 Container(
-                  width: 200.0,
+                  width: 100.0,
                   child: SampleAppPage(),
-                ),
-                Container(
-                  width: 200.0,
-                  child: SampleAppPage(),
-                ),
+                )
               ],
             )
         )
